@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "811943458573",
+    "firebase_url": "https://golf-261fd.firebaseio.com",
+    "project_id": "golf-261fd",
+    "storage_bucket": "golf-261fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811943458573:android:ec981f2fe7f1ea1b35e244",
+        "android_client_info": {
+          "package_name": "strathmore.university.gym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811943458573-5msot6ctonen28vhaarqu2a4v6g9056l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSxaJoRg9I0flO3_ZJQdoO0kxJPd9W9uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811943458573-5msot6ctonen28vhaarqu2a4v6g9056l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
