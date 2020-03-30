@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this, "Log In Error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Please enter your Email or Password Correctly", Toast.LENGTH_SHORT).show();
 
                     }
                 });
