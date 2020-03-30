@@ -13,6 +13,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class GymLocations extends FragmentActivity implements OnMapReadyCallback {
 
@@ -43,12 +44,13 @@ public class GymLocations extends FragmentActivity implements OnMapReadyCallback
 
         mLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(GymLocations.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+                public void onClick(View v) {
+                    FirebaseAuth.getInstance().signOut();
+                    Intent intent = new Intent(GymLocations.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
     }
 
     @Override
