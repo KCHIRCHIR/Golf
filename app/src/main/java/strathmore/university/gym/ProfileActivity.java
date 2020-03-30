@@ -7,32 +7,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class RegisterActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
-    private Button mRegister;
+    private Button mSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_profile);
 
-        mRegister = findViewById(R.id.btnRegister);
+        mSave = findViewById(R.id.saveChanges);
 
-        mRegister.setOnClickListener(new View.OnClickListener() {
+        mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, GymLocations.class);
+                Intent intent = new Intent(ProfileActivity.this, GymLocations.class);
                 startActivity(intent);
                 finish();
             }
         });
-
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+        Intent intent = new Intent(ProfileActivity.this, GymLocations.class);
         startActivity(intent);
         finish();
     }

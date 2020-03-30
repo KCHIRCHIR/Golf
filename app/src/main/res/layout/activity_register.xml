@@ -74,7 +74,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:background="@drawable/btn_sign_in_background"
         android:textColor="@android:color/black"

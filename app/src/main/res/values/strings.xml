@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Golf</string>
+    <string name="title_activity_gym_locations">Map</string>
 </resources>
