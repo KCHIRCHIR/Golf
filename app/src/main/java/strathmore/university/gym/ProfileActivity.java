@@ -60,15 +60,11 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-//        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setHomeButtonEnabled(true);
- //       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mFirstName = (EditText) findViewById(R.id.firstName);
         mLastName = (EditText) findViewById(R.id.lastName);
         mEmailAddress = (EditText) findViewById(R.id.email);
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
-        mSave = findViewById(R.id.saveChanges);
+        mSave = (Button) findViewById(R.id.saveChanges);
 
         mAuth = FirebaseAuth.getInstance();
         userID = mAuth.getCurrentUser().getUid();
@@ -79,16 +75,16 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveUserInformation();
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent, 1);
             }
         });
 
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this, GymLocations.class);
-                startActivity(intent);
-                finish();
+                saveUserInformation();
             }
         });
     }
@@ -124,24 +120,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        int id = item.getItemId();
-        if (id == android.R.id.home)
-        {
-            onBackPressed();
-            return true;
-        }
-        else
-        {
-            return super.onOptionsItemSelected(item);
-        }
-    }
-
     private void saveUserInformation() {
-        mProgressDialog.setMessage("Saving... \n Please Wait.. :)");
-        mProgressDialog.show();
         mFirst = mFirstName.getText().toString();
         mLast = mLastName.getText().toString();
         mEmail = mEmailAddress.getText().toString();
@@ -180,7 +159,6 @@ public class ProfileActivity extends AppCompatActivity {
 
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    mProgressDialog.dismiss();
                     Task<Uri> urlTask = taskSnapshot.getStorage().getDownloadUrl();
                     while (!urlTask.isSuccessful());
                     Uri downloadUrl = urlTask.getResult();
