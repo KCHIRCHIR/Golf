@@ -74,4 +74,16 @@
         android:text="Forgot Your Password?"
         android:textColor="@android:color/black"
         android:textSize="18dp" />
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/changeLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="36.00dp"
+        app:mstbColorPressedBackground="@android:color/holo_blue_bright"
+        app:mstbPrimaryColor="@android:color/white"
+        app:mstbSecondaryColor="@android:color/holo_blue_bright"
+        app:values="@array/language_array" />
+
 </LinearLayout>
