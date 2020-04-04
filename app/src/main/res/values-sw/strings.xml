@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Golf</string>
-
     <string name="login">Ingia</string>
     <string name="email">Ingiza Anwani Yako Ya Barua Pepe</string>
     <string name="password">Ingiza Nenosiri Yako</string>
     <string name="reset">Umesahau Nenosiri Yako?</string>
     <string name="register">Jiandikishe Sasa</string>
-
-
-    <string-array name="language_array">
-        <item>Swahili</item>
-        <item>English</item>
-    </string-array>
+    <string name="signUp">Jiandikishe</string>
+    <string name="firstName">Ingiza Jina Lako La Kwanza</string>
+    <string name="lastName">Ingiza Jina Lako La Mwisho</string>
+    <string name="confirm">Thibitisha Nenosiri Lako</string>
+    <string name="forgot">Rudisha Nenosiri</string>
 </resources>

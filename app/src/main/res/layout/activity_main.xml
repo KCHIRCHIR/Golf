@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Login"
+        android:text="@string/login"
         android:fontFamily="@font/sf_pro_display_medium"
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -29,7 +29,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Enter Your Email Address"
+        android:hint="@string/email"
         android:textSize="18dp"
         android:inputType="textEmailAddress" />
 
@@ -39,7 +39,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Enter Your Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textSize="18dp" />
 
@@ -52,7 +52,7 @@
         android:layout_margin="15dp"
         android:textSize="18dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:text="Login"
+        android:text="@string/login"
         android:textAllCaps="true"/>
 
     <TextView
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:text="Register Now"
+        android:text="@string/register"
         android:textColor="@android:color/black"
         android:textSize="18dp" />
 
@@ -71,19 +71,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_pro_display_medium"
         android:layout_marginTop="30dp"
-        android:text="Forgot Your Password?"
+        android:text="@string/reset"
         android:textColor="@android:color/black"
         android:textSize="18dp" />
-
-    <org.honorato.multistatetogglebutton.MultiStateToggleButton
-        android:id="@+id/changeLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:layout_marginTop="36.00dp"
-        app:mstbColorPressedBackground="@android:color/holo_blue_bright"
-        app:mstbPrimaryColor="@android:color/white"
-        app:mstbSecondaryColor="@android:color/holo_blue_bright"
-        app:values="@array/language_array" />
 
 </LinearLayout>

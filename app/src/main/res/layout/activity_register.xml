@@ -13,11 +13,11 @@
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/login"
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Register"
+        android:text="@string/signUp"
         android:fontFamily="@font/sf_pro_display_medium"
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -29,7 +29,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Enter Your First Name"
+        android:hint="@string/firstName"
         android:textSize="18dp"
         android:inputType="text" />
 
@@ -39,7 +39,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Enter Your Last Name"
+        android:hint="@string/lastName"
         android:inputType="text"
         android:textSize="18dp" />
 
@@ -49,7 +49,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Enter Your Email Address"
+        android:hint="@string/email"
         android:textSize="18dp"
         android:inputType="textEmailAddress" />
 
@@ -59,7 +59,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Enter Your Password"
+        android:hint="@string/password"
         android:textSize="18dp"
         android:inputType="textPassword" />
 
@@ -69,7 +69,7 @@
         android:layout_height="60dp"
         android:layout_margin="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:hint="Confirm Your Password"
+        android:hint="@string/confirm"
         android:textSize="18dp"
         android:inputType="textPassword" />
 
@@ -82,7 +82,7 @@
         android:layout_margin="15dp"
         android:textSize="18dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:text="Register"
+        android:text="@string/signUp"
         android:textAllCaps="true"/>
 
 </LinearLayout>

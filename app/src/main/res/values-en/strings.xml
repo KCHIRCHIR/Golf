@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Golf</string>
-    <string name="title_activity_gym_locations" translatable="false">Map</string>
     <string name="login">Login</string>
     <string name="email">Enter Your Email Address</string>
     <string name="password">Enter Your Password</string>
