@@ -127,8 +127,8 @@ public class MainActivity extends AppCompatActivity {
 
         mEnter.setText(resources.getString(R.string.login));
         mLogin.setText(resources.getString(R.string.login));
- //       mEmail.setText(resources.getString(R.string.email));
-  //      mPassword.setText(resources.getString(R.string.password));
+//        mEmail.setText(resources.getString(R.string.email));
+ //       mPassword.setText(resources.getString(R.string.password));
         mRegister.setText(resources.getString(R.string.register));
         mReset.setText(resources.getString(R.string.reset));
 
