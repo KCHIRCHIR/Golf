@@ -3,6 +3,7 @@ package strathmore.university.gym;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.location.Location;
@@ -10,6 +11,9 @@ import android.location.LocationListener;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -33,7 +37,6 @@ public class GymLocations extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private Button mLogOut;
     private Button mProfile;
-    private Button mGolfClubs;
 
     DatabaseReference mLocations;
     Marker marker;
@@ -53,21 +56,11 @@ public class GymLocations extends FragmentActivity implements OnMapReadyCallback
 
         mLogOut = findViewById(R.id.logout);
         mProfile = findViewById(R.id.profile);
-        mGolfClubs = findViewById(R.id.golfClubs);
 
         mProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GymLocations.this, ProfileActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        mGolfClubs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(GymLocations.this, GolfClubs.class);
                 startActivity(intent);
                 finish();
             }
@@ -93,10 +86,12 @@ public class GymLocations extends FragmentActivity implements OnMapReadyCallback
         mLocations.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot s : dataSnapshot.getChildren()){
+                for (DataSnapshot s : dataSnapshot.getChildren()) {
                     GolfLocation user = s.getValue(GolfLocation.class);
                     LatLng location = new LatLng(user.latitude, user.longitude);
-                    mMap.addMarker(new MarkerOptions().position(location).title(user.name)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+                    mMap.addMarker(new MarkerOptions().position(location).title(user.name).snippet("Opening time : 0800hrs \n" +
+                            "Closing time: 2300hrs\n" +
+                            "Details: For Golfers and lovers of golf.")).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
                 }
             }
 
@@ -132,4 +127,5 @@ public class GymLocations extends FragmentActivity implements OnMapReadyCallback
     public boolean onMarkerClick(Marker marker) {
         return false;
     }
+
 }
